@@ -127,10 +127,9 @@ class GuardService : AccessibilityService() {
         lastBlockPkg = pkg
         lastBlockAt = now
         Log.i(UsageEngine.TAG, "block $pkg: ${b.kind} ${b.title}")
-        main.post {
-            performGlobalAction(GLOBAL_ACTION_HOME)
-            startActivity(BlockActivity.intent(this, pkg, b))
-        }
+        // Only cover the app with the block page. Pressing HOME at the same time races with the activity
+        // start and the launcher ends up on top of the block page.
+        main.post { startActivity(BlockActivity.intent(this, pkg, b)) }
     }
 
     private fun blockShortsApp(pkg: String) {

@@ -193,12 +193,22 @@ fun BarChart(
         }
         Spacer(Modifier.height(6.dp))
         Row(Modifier.fillMaxWidth()) {
-            labels.forEachIndexed { i, l ->
-                Text(
-                    if (i % labelEvery == 0) l else "", Modifier.weight(1f), fontSize = 10.sp,
-                    color = if (highlight == i) MaterialTheme.colorScheme.onSurface else pal.dim,
-                    textAlign = androidx.compose.ui.text.style.TextAlign.Center, maxLines = 1,
-                )
+            if (labelEvery <= 1) {
+                labels.forEachIndexed { i, l ->
+                    Text(
+                        l, Modifier.weight(1f), fontSize = 10.sp,
+                        color = if (highlight == i) MaterialTheme.colorScheme.onSurface else pal.dim,
+                        textAlign = androidx.compose.ui.text.style.TextAlign.Center, maxLines = 1,
+                    )
+                }
+            } else {
+                // one label per group of bars, aligned to the group's first bar
+                labels.indices.chunked(labelEvery).forEach { group ->
+                    Text(
+                        labels[group.first()], Modifier.weight(group.size.toFloat()), fontSize = 10.sp,
+                        color = pal.dim, maxLines = 1,
+                    )
+                }
             }
         }
     }
@@ -208,7 +218,7 @@ fun BarChart(
 fun Stat(label: String, value: String, modifier: Modifier = Modifier, sub: String? = null) {
     Column(modifier) {
         Text(value, fontSize = 20.sp, fontWeight = FontWeight.SemiBold)
-        Text(label, fontSize = 12.sp, color = LocalPalette.current.dim)
+        Text(label, fontSize = 12.sp, color = LocalPalette.current.dim, maxLines = 1, overflow = TextOverflow.Ellipsis)
         if (sub != null) Text(sub, fontSize = 11.sp, color = LocalPalette.current.dim)
     }
 }

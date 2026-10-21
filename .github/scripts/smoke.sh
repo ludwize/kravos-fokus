@@ -35,6 +35,9 @@ for n in root.iter('node'):
 if len(hits) > idx:
     print(*hits[idx])
 PY
+  if [ ! -s "$OUT/tap.txt" ] && [ "${RETRY:-1}" = 1 ]; then
+    sleep 2; RETRY=0 tap_text "$1" "${2:-0}"; return
+  fi
   if [ -s "$OUT/tap.txt" ]; then
     adb shell input tap $(cat "$OUT/tap.txt"); echo "tapped $1" >> "$OUT/steps.txt"
   else
@@ -89,11 +92,11 @@ adb shell input keyevent KEYCODE_BACK; sleep 2
 # the blocked app: schedule "Test blokada" covers the whole day
 open_app com.google.android.deskclock 6
 shot 30-block-schedule
-tap_text "Zatvori"; sleep 2
+tap_text "Zatvori"; sleep 3; shot 31-after-close
 
 adb shell am start -n $PKG/.ui.MainActivity --es tab FOCUS >/dev/null; sleep 4
 shot 40-focus
-tap_text "Započni 25 min"; sleep 4; shot 41-focus-running
+scroll; tap_text "Započni 25 min"; sleep 4; shot 41-focus-running
 open_app com.google.android.contacts 6
 shot 42-block-session
 home

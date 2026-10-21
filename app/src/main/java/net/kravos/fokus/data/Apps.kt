@@ -72,7 +72,7 @@ class Apps(private val ctx: Context) {
     fun transient(): Set<String> = transientCache ?: run {
         val imm = ctx.getSystemService(InputMethodManager::class.java)
         val ime = runCatching { imm.enabledInputMethodList.map { it.packageName } }.getOrDefault(emptyList())
-        (ime + listOf("com.android.systemui", "android")).toSet().also { transientCache = it }
+        (ime + listOf("com.android.systemui", "android", "com.google.android.permissioncontroller", "com.android.permissioncontroller")).toSet().also { transientCache = it }
     }
 
     @Volatile private var launcherCache: Set<String>? = null
