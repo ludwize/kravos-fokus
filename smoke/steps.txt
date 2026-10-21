@@ -5,11 +5,9 @@ shot 04-today-scroll2
 tapped Statistika
 shot 10-stats-day
 shot 11-stats-day-scroll
-not found: Nedelja
 shot 12-stats-week
 shot 13-stats-week-scroll
 shot 14-stats-week-scroll2
-not found: Dan
 tapped Pravila
 shot 20-rules
 shot 21-rules-shorts
@@ -35,6 +33,5 @@ shot 50-settings
 shot 51-settings-scroll
 shot 52-settings-scroll2
 tapped Statistika
-not found: Kontakti
-not found: Contacts
+tapped Clock
 shot 60-app-detail
