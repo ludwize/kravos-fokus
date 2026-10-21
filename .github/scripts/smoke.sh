@@ -73,6 +73,7 @@ scroll; shot 04-today-scroll2
 
 tap_text "Statistika"; sleep 4; shot 10-stats-day
 scroll; shot 11-stats-day-scroll
+adb shell input swipe $((W / 2)) $((H / 4)) $((W / 2)) $((H * 3 / 4)) 300; adb shell input swipe $((W / 2)) $((H / 4)) $((W / 2)) $((H * 3 / 4)) 300; sleep 2
 adb shell input tap $((W * 3 / 4)) $((H * 148 / 1000)); sleep 6; shot 12-stats-week
 scroll; shot 13-stats-week-scroll
 scroll; shot 14-stats-week-scroll2
