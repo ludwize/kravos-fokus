@@ -73,10 +73,10 @@ scroll; shot 04-today-scroll2
 
 tap_text "Statistika"; sleep 4; shot 10-stats-day
 scroll; shot 11-stats-day-scroll
-tap_text "Nedelja"; sleep 6; shot 12-stats-week
+adb shell input tap $((W * 3 / 4)) $((H * 148 / 1000)); sleep 6; shot 12-stats-week
 scroll; shot 13-stats-week-scroll
 scroll; shot 14-stats-week-scroll2
-tap_text "Dan"; sleep 2
+adb shell input tap $((W / 4)) $((H * 148 / 1000)); sleep 2
 
 tap_text "Pravila"; sleep 3; shot 20-rules
 scroll; shot 21-rules-shorts
@@ -109,7 +109,7 @@ scroll; shot 51-settings-scroll
 scroll; shot 52-settings-scroll2
 adb shell input keyevent KEYCODE_BACK; sleep 2
 tap_text "Statistika"; sleep 4
-tap_text "Kontakti" ; tap_text "Contacts"; sleep 4; shot 60-app-detail
+scroll; tap_text "Clock"; sleep 4; shot 60-app-detail
 
 PID=$(adb shell pidof $PKG | tr -d '\r')
 echo "pid=$PID" > "$OUT/status.txt"

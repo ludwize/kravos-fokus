@@ -66,7 +66,9 @@ class BlockActivity : ComponentActivity() {
         setContent {
             FokusTheme(ThemeMode.DARK) {
                 BackHandler { goHome() }
-                info?.let { Screen(app, it) }
+                androidx.compose.material3.Surface(color = MaterialTheme.colorScheme.background, contentColor = MaterialTheme.colorScheme.onBackground) {
+                    info?.let { Screen(app, it) }
+                }
             }
         }
     }
