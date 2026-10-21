@@ -1,0 +1,39 @@
+shot 01-today-setup
+shot 02-today
+shot 03-today-scroll
+shot 04-today-scroll2
+tapped Statistika
+shot 10-stats-day
+shot 11-stats-day-scroll
+not found: Nedelja
+shot 12-stats-week
+shot 13-stats-week-scroll
+shot 14-stats-week-scroll2
+not found: Dan
+tapped Pravila
+shot 20-rules
+shot 21-rules-shorts
+tapped Društvene
+shot 22-rule-edit
+shot 23-rule-edit-scroll
+shot 24-rule-edit-scroll2
+tapped Nova grupa
+shot 25-new-rule
+tapped Izmeni
+shot 26-app-picker
+shot 30-block-schedule
+not found: Zatvori
+shot 40-focus
+not found: Započni 25 min
+shot 41-focus-running
+shot 42-block-session
+not found: Završi ranije
+shot 43-focus-ended
+tapped Podešavanja
+shot 50-settings
+shot 51-settings-scroll
+shot 52-settings-scroll2
+tapped Statistika
+not found: Kontakti
+not found: Contacts
+shot 60-app-detail
