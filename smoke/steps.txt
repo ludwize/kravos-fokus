@@ -22,12 +22,13 @@ shot 25-new-rule
 tapped Izmeni
 shot 26-app-picker
 shot 30-block-schedule
-not found: Zatvori
+tapped Zatvori
+shot 31-after-close
 shot 40-focus
-not found: Započni 25 min
+tapped Započni 25 min
 shot 41-focus-running
 shot 42-block-session
-not found: Završi ranije
+tapped Završi ranije
 shot 43-focus-ended
 tapped Podešavanja
 shot 50-settings
