@@ -1,0 +1,6 @@
+-keep class net.kravos.fokus.work.** { *; }
+-keep class net.kravos.fokus.block.GuardService { *; }
+-dontwarn org.conscrypt.**
+-dontwarn org.bouncycastle.**
+-dontwarn org.openjsse.**
+-dontwarn okhttp3.internal.platform.**

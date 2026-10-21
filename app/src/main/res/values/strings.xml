@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kravos Fokus</string>
+    <string name="guard_label">Kravos Fokus – čuvar</string>
+    <string name="guard_desc">Prati koja je aplikacija otvorena da bi primenio tvoje limite, rasporede, fokus sesije i blokadu Shorts/Reels. Ne čita i ne šalje sadržaj ekrana nigde.</string>
+</resources>
