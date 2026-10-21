@@ -2,6 +2,6 @@ Starting: Intent { cmp=net.kravos.fokus/.ui.MainActivity (has extras) }
 Status: ok
 LaunchState: COLD
 Activity: net.kravos.fokus/.ui.MainActivity
-TotalTime: 1458
-WaitTime: 1481
+TotalTime: 880
+WaitTime: 886
 Complete

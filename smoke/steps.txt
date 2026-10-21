@@ -33,5 +33,5 @@ shot 50-settings
 shot 51-settings-scroll
 shot 52-settings-scroll2
 tapped Statistika
-tapped Clock
+not found: Clock
 shot 60-app-detail
